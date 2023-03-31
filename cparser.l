@@ -85,6 +85,10 @@ static int check_type(void);
 "_Static_assert"			{ return STATIC_ASSERT; }
 "_Thread_local"				{ return THREAD_LOCAL; }
 "__func__"				{ return FUNC_NAME; }
+"__user"				{ return ATTRIBUTE; }
+"__kernel"				{ return ATTRIBUTE; }
+"__iomem"				{ return ATTRIBUTE; }
+"__percpu"				{ return ATTRIBUTE; }
 
 {L}{A}*					{ return check_type(); }
 
